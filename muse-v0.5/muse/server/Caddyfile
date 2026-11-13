@@ -1,0 +1,3 @@
+muse.example.com {
+	reverse_proxy muse:3000
+}

@@ -1,0 +1,32 @@
+services:
+  muse:
+    build: .
+    restart: unless-stopped
+    environment:
+      - DONATE_URL=${DONATE_URL:-}
+      - YT_PROXY=${YT_PROXY:-}
+      - DISCORD_CLIENT_ID=${DISCORD_CLIENT_ID:-}
+      - DISCORD_CLIENT_SECRET=${DISCORD_CLIENT_SECRET:-}
+      - PUBLIC_URL=${PUBLIC_URL:-}
+      - ADMIN_USER=${ADMIN_USER:-}
+      - ADMIN_PASS=${ADMIN_PASS:-}
+      - ADMIN_NAME=${ADMIN_NAME:-}
+    volumes:
+      - ./data:/app/data
+    expose:
+      - "3000"
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+    depends_on:
+      - muse
+
+volumes:
+  caddy_data:

@@ -1,0 +1,7 @@
+{
+  "bundle": {
+    "resources": {
+      "sdk/discord_partner_sdk.dll": "discord_partner_sdk.dll"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"identifier":"remote-muse","description":"Cho phép trang Muse từ server gọi lệnh Discord","windows":["main"],"remote":{"urls":["http://localhost:3000","http://localhost:3000/*"]},"permissions":["core:default"]}
