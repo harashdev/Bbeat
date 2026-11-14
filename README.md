@@ -83,6 +83,8 @@
 - Discord Rich Presence through Discord IPC or the Discord Social SDK.
 - Experimental **pure Rust client (egui)**: no WebView2, so it is light on RAM, with native AAC/MP4 playback. It currently has sign-in, home, search, favorites, history, queue, playlists and the player bar. Listening rooms, friends, karaoke lyrics and settings are not in it yet.
 
+  ## THIS IS NOT THE STABLE VERSION
+
 ## Web
 
 - Runs in any modern browser and can be installed as an app, with a manifest and service worker so the interface opens offline.
